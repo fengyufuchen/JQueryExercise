@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.js"></script>
+    <style type="text/css">
+        #menu{width:300px;}
+        .has_children{background:#ffff00;color:#b3d4fc;cursor:pointer;}
+        .highlight{color:#c0c0c0;background:green;}
+        div{padding:0;margin:10px 0;}
+        div a{background:#888;display:none;float:left;width:300px;}
+
+    </style>
+<script type="text/javascript">
+    $(function(){
+        alert("ready");
+       $(".has_children").click(function(){
+          $(this).addClass("highlight").children("a").show().end().siblings().removeClass("highlight").children("a").hide();
+       });
+    });
+</script>
+
+
+</head>
+<body>
+<div id="menu">
+    <div class="has_children">
+        <span>第一章-认识</span>
+        <a>1.1 JavaScript和JavaScript库</a>
+        <a>1.2加入JQuery</a>
+        <a>1.3编写简单的JQuery代码</a>
+        <a>1.4JQuery对象和dom映射</a>
+        <a>1.5解决JQuery和其他库的冲突</a>
+        <a>1.6JQuery开发工具和插件</a>
+
+    </div>
+    <div class="has_children">
+        <span>第2章JQuery选择器</span>
+        <a>2.1 JQuery选择器是什么</a>
+        <a>2.2Jquery选择器的优势</a>
+
+    </div>
+    <div class="has_children">
+        <span>第3章JQuery中的dom操作</span>
+        <a>3.1dom操作的分类</a>
+        <a>3.2JQuery中的do操作</a>
+        <a>3.3案例研究</a>
+    </div>
+</div>
+
+</body>
+</html>

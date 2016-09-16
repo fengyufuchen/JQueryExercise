@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $comment=$("#comment");
+            $(".bigger").click(function () {
+                if(!$comment.is(":animated")){
+                    $comment.animate({height:"+=50"},400);
+                }
+
+            });
+            $(".smaller").click(function () {
+                if(!$comment.is(":animated")){
+                    $comment.animate({height:"-=50"},400);
+                }
+
+
+            })
+
+        })
+    </script>
+</head>
+<body>
+
+  <form>
+
+      <div class="msg">
+        <div class="msg_caption" >
+            <span class="bigger">放大</span>
+            <span class="smaller">缩小</span>
+
+        </div>
+          <div>
+              <textarea id="comment" row="8" cols="20">
+                  jQuery.parent(expr) 找父亲节点，可以传入expr进行过滤，比如$("span").parent()或者$("span").parent(".class")
+
+jQuery.parents(expr),类似于jQuery.parents(expr),但是是查找所有祖先元素，不限于父元素
+
+jQuery.children(expr).返回所有子节点，这个方法只会返回直接的孩子节点，不会返回所有的子孙节点
+
+jQuery.contents(),返回下面的所有内容，包括节点和文本。这个方法和children()的区别就在于，包括空白文本，也会被作为一个
+
+jQuery对象返回，children()则只会返回节点
+
+jQuery.prev()，返回上一个兄弟节点，不是所有的兄弟节点
+
+              </textarea>
+          </div>
+
+      </div>
+  </form>
+
+</body>
+</html>
